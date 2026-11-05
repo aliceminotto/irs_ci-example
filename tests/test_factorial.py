@@ -1,6 +1,7 @@
 import pytest
 from mymath.factorial import factorial
 
+# adding line to commit and verify ci is working
 
 def test_3():
     assert factorial(3) == 6
