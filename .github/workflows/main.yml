@@ -8,13 +8,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Set up python3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Install Python dependencies
-        run: 
+        run: |
           python3 -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip3 install -r requirements.txt
       - name: Test with pytest
-        run: 
-          python3 -m pytest -v tests/test_factorial.py
+        run: |
+          python -m pytest -v tests/test_factorial.py
